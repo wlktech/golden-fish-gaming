@@ -22,6 +22,14 @@ body {
   border: 3px solid #ffd700;
   box-shadow: 3px 3px 5px #ffd700;
 }
+.text-gold{
+  color: #ffd700;
+}
+.btn-gold{
+  background-color: #000000;
+  border: 1px solid #ffd700;
+  color: #fff;
+}
   
   .fixed-header {
     display: block;

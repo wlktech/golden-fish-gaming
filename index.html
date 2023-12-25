@@ -10,16 +10,37 @@
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- font awesome cdn -->
-    
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+      @keyframes custom-bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        25% {
+          transform: translateY(-30px);
+        }
+        50% {
+          transform: translateY(0);
+        }
+        75% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .custom-animation {
+        animation: custom-bounce 6s infinite;
+        animation-delay: 2s; /* Delay before the animation starts */
+      }
+    </style>
   </head>
   <body>
 
     <div class="container-fluid fixed-top">
       <div class="row">
           <div class="col-lg-5 mx-auto">
-              <div id="fixed-header" class="d-none d-flex justify-content-between align-items-center py-2 mt-3" style="background-color: #f9b17a;opacity: 0.8;border-radius: 30px;">
-              <img style="border-radius: 50%" src="./assets/img/logo.jpg" width="50px" height="50px" class="ms-1" alt=""/>
+              <div id="fixed-header" class="d-none d-flex justify-content-between align-items-center py-2 mt-3 bg-darkblue rounded-5 px-2 border-gradient-green">
+              <img class="rounded-circle border-gradient-gold" src="./assets/img/logo.jpg" width="50px" height="50px" class="ms-1" alt=""/>
               <a href="" onclick="event.preventDefault()" data-bs-target="#mysite" data-bs-toggle="modal"><i class="fa-solid fa-share-nodes me-3" style="font-size: 30px;color: #fff"></i></a>
             </div>
           </div>
@@ -44,17 +65,16 @@
           </p>
           
           <div class="d-flex justify-content-center my-5">
-            <a href="" class="d-block" style="width: 100%;">
+            <a href="" onclick="event.preventDefault()" data-bs-target="#game1" data-bs-toggle="modal" class="d-block custom-animation" style="width: 100%;">
                 <img src="./assets/img/games/skm.png" class="w-100 rounded border-gradient-gold" alt="">
             </a>
-            <a href="" class="d-block mx-2 mx-md-5" style="width: 100%;">
+            <a href="" onclick="event.preventDefault()" data-bs-target="#game2" data-bs-toggle="modal" class="d-block mx-2 mx-md-5 custom-animation" style="width: 100%;">
                 <img src="./assets/img/games/club388.jpeg" class="w-100 rounded border-gradient-gold" alt="">
             </a>
-            <a href="" class="d-block" style="width: 100%;">
+            <a href="" onclick="event.preventDefault()" data-bs-target="#game3" data-bs-toggle="modal" class="d-block custom-animation" style="width: 100%;">
                 <img src="./assets/img/games/m9skm.jpeg" class="w-100 rounded border-gradient-gold" alt="">
             </a>
           </div>
-          <!-- Hello Testing -->
 
           <!-- <div class="accordion mt-3 border-gradient-green" id="accordionExample">
             <div class="accordion-item">
@@ -116,10 +136,13 @@
                 <i class="fa-brands fa-facebook me-2" style="font-size: 20px;"></i> 
                 <small>Facebook မှအကောင့်ဖွင့် ကစားရန်</small>
             </a>
-          <a href="" class="btn text-btn mt-3 fw-bold">
-            <marquee direction="left">မန်ဘာသစ် ၁၀၀ % နေ့စဉ်ဘောနပ် ၂၀ % မိတ်ဆက် ၁၀% ရုံးကြေး ၅%</marquee>
+          <a href="" onclick="event.preventDefault();" class="btn border-gradient-gold w-100 bg-darkblue">
+            <marquee direction="left" class="py-2">မန်ဘာသစ် ၁၀၀ % နေ့စဉ်ဘောနပ် ၂၀ % မိတ်ဆက် ၁၀% ရုံးကြေး ၅%</marquee>
           </a>
-          <div id="carouselExampleIndicators" class="carousel slide mt-3" data-bs-ride="true">
+          <div class="mt-5">
+            <img src="./assets/img/banners/bonus.webp" class="img-fluid" alt="">
+          </div>
+          <!-- <div id="carouselExampleIndicators" class="carousel slide mt-3" data-bs-ride="true">
             <div class="carousel-indicators" style="margin-bottom: -25px;" >
               <button type="button" style="width: 10px; height: 10px;border-radius: 50%;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" style="width: 10px; height: 10px;border-radius: 50%;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -170,9 +193,9 @@
                 <img src="./assets/img/banner4.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
-          </div>
-           <a href="" class="btn text-btn mt-5 text-dark fw-bold">
-            <marquee direction="left">၁၀၀% အလျော်အစားမှန်တဲ့ ဂိမ်းဆိုဒ်၏ ငွေထုတ်ပြေစာများ</marquee>
+          </div> -->
+           <a href="" onclick="event.preventDefault();" class="btn border-gradient-gold bg-darkblue w-100">
+            <marquee direction="left" class="py-2">၁၀၀% အလျော်အစားမှန်တဲ့ ဂိမ်းဆိုဒ်၏ ငွေထုတ်ပြေစာများ</marquee>
           </a>
 
           <div class="row mt-3">
@@ -183,7 +206,7 @@
                     <div class="card">
                       <div class="card-img">
                         <img
-                          src="./assets/img/1.jpg"
+                          src="./assets/img/invoices/1.jpg"
                           class="img-fluid"
                         />
                       </div>
@@ -196,7 +219,7 @@
                     <div class="card">
                       <div class="card-img">
                         <img
-                          src="./assets/img/2.jpg"
+                          src="./assets/img/invoices/2.jpg"
                           class="img-fluid"
                         />
                       </div>
@@ -209,7 +232,7 @@
                     <div class="card">
                       <div class="card-img">
                         <img
-                          src="./assets/img/3.jpg"
+                          src="./assets/img/invoices/3.jpg"
                           class="img-fluid"
                         />
                       </div>
@@ -222,7 +245,7 @@
                     <div class="card">
                       <div class="card-img">
                         <img
-                          src="./assets/img/4.jpg"
+                          src="./assets/img/invoices/4.jpg"
                           class="img-fluid"
                         />
                       </div>
@@ -235,7 +258,7 @@
                     <div class="card">
                       <div class="card-img">
                         <img
-                          src="./assets/img/2.jpg"
+                          src="./assets/img/invoices/5.jpg"
                           class="img-fluid"
                         />
                       </div>
@@ -248,7 +271,7 @@
                     <div class="card">
                       <div class="card-img">
                         <img
-                          src="./assets/img/3.jpg"
+                          src="./assets/img/invoices/1.jpg"
                           class="img-fluid"
                         />
                       </div>
@@ -263,7 +286,7 @@
                 role="button"
                 data-bs-slide="prev"
               >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></small>
               </a>
               <a
                 class="carousel-control-next bg-transparent w-aut"
@@ -271,17 +294,17 @@
                 role="button"
                 data-bs-slide="next"
               >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></small>
               </a>
             </div>
           </div>
-          <div>
+          <!-- <div>
               <div class="mt-3 btns">
                 <a href="http://m9skm.com/game373/index.html" target="_blank">
                     <div class="d-flex justify-content-between align-items-center">
                       <div  class="d-flex justify-content-center align-items-center">
                         <img src="./assets/img/skm.jpg"  alt="" class="rounded-circle">
-                        <span class="ms-3">M9 ရှမ်းကိုးမီး တိုက်ရိုက်လင့် </span>
+                        <span class="ms-3">M9 ရှမ်းကိုးမီး တိုက်ရိုက်လင့် </small>
                       </div>
                       <i class="fa-solid fa-share-nodes" onclick="event.preventDefault()" data-bs-target="#game1" data-bs-toggle="modal"></i>
                     </div>
@@ -292,18 +315,18 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div  class="d-flex justify-content-center align-items-center">
                         <img src="./assets/img/skm.jpg"  alt="" class="rounded-circle">
-                        <span class="ms-3">M9 ရှမ်းကိုးမီး ဒေါင်းရန် </span>
+                        <span class="ms-3">M9 ရှမ်းကိုးမီး ဒေါင်းရန် </small>
                       </div>
                       <i class="fa-solid fa-share-nodes" onclick="event.preventDefault()" data-bs-target="#game2" data-bs-toggle="modal"></i>
                     </div>
                 </a>
               </div>
-        </div>
+        </div> -->
 
         <div class="d-flex justify-content-center align-items-center my-3" style="padding-bottom: 30px;">
           <img src="./assets/img/no.jpg" alt="" style="width: 40%; height: 30%;">
         </div>
-        <p class="text-white text-center">Copyright 2023 &copy; by <a class="text-decoration-none text-warning" href="https://delightmyanmar.pro/" target="_blank">Delight Myanmar Web Team</a> </p>
+        <p class="text-white text-center">&copy;Copyright 2023 by <a class="text-decoration-none text-white fw-bold" href="https://delightmyanmar.pro/" target="_blank">Delight Myanmar</a> </p>
         </div>
       </div>   
     </div>
@@ -322,56 +345,58 @@
 <!-- mysite share links modal -->
 <div class="modal fade" tabindex="-1" id="mysite">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3">
+    <div class="modal-content p-3 bg-darkblue border-gradient-green">
       <div class="d-flex justify-content-between">
         <h5 class="modal-title">Share Social Media</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn" data-bs-dismiss="modal">
+          <i class="fas fa-xmark text-gold"></i>
+        </button>
       </div>
-      <div class="mt-5">
+      <div class="mt-4">
         <div class="mb-3">
-          <input type="text" value="https://yoeyarshan.online/" class="form-control border border-0 bg-light">
+          <input type="text" value="https://golden-fish-gaming.online/" class="form-control border-gradient-gold">
         </div>
 <!-- facebook link share -->
-        <div class="card mb-2 border border-opacity-10">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://yoeyarshan.online/" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
+        <div class="card border-gradient-gold bg-darkblue mb-3">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://golden-fish-gaming.online/" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
             <div class="d-flex justify-content-between">
               <div class="d-flex">
-                <i class="fa-brands fa-facebook-square text-primary d-block fa-2x me-3"></i>
-                <span class="d-block mt-1"> Share on Facebook</span>
+                <i class="fa-brands fa-facebook-square text-gold d-block me-3" style="font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share on Facebook</small>
               </div>
-              <div>
-                <i class="fas fa-angle-right d-block mt-1" style="font-size: 18px;"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right d-block text-gold" style="font-size: 18px;"></i>
               </div>
             </div>
           </a>
         </div>
 <!-- facebook link share -->
 <!-- telegram link share -->
-        <div class="card mb-2 border border-opacity-10">
-          <a href="https://telegram.me/share/url?url=https://yoeyarshan.online/" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
+        <div class="card border-gradient-gold bg-darkblue mb-3">
+          <a href="https://telegram.me/share/url?url=https://golden-fish-gaming.online/" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
             <div class="d-flex justify-content-between">
               <div class="d-flex">
-                <i class="fa-brands fa-telegram text-info d-block fa-2x me-3"></i>
-                <span class="d-block mt-1"> Share via Telegram</span>
+                <i class="fa-brands fa-telegram text-gold d-block me-3" style="font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share via Telegram</small>
               </div>
-              <div>
-                <i class="fas fa-angle-right d-block mt-1" style="font-size: 18px;"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right d-block text-gold" style="font-size: 18px;"></i>
               </div>
             </div>
           </a>
         </div>
 <!-- telegram link share -->
 <!-- viber link share -->
-        <div class="card mb-2 border border-opacity-10">
+        <div class="card border-gradient-gold bg-darkblue mb-3">
           <a href="viber://forward?text=နာမည်ပျက်လုံးဝ လုံးဝမရှိ အလျော်/အစား အမှန်ကန်တဲ့ ရိုးရာရှမ်း အမ်နိုင်းရှမ်းကိုးမီး
-          မြန်မာနိုင်ငံရဲ့ အကောင်းဆုံး ရှမ်းကိုးမီး😘%20https://yoeyarshan.online/" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
+          မြန်မာနိုင်ငံရဲ့ အကောင်းဆုံး ရှမ်းကိုးမီး😘%20https://golden-fish-gaming.online/" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
             <div class="d-flex justify-content-between">
               <div class="d-flex">
-                <i class="fa-brands fa-viber d-block me-3 bg-transparent text-primary" style="width:auto; height:auto; font-size: 30px;"></i>
-                <span class="d-block mt-2"> Share via Viber</span>
+                <i class="fa-brands fa-viber d-block text-gold me-3" style="font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share via Viber</small>
               </div>
-              <div>
-                <i class="fas fa-angle-right d-block mt-2" style="font-size: 18px;"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right d-block text-gold" style="font-size: 18px;"></i>
               </div>
             </div>
           </a>
@@ -385,125 +410,207 @@
 <!-- taungPawThar ShanKoeMee Game share links modal -->
 <div class="modal fade" tabindex="-1" id="game1">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3">
+    <div class="modal-content p-3 bg-darkblue border-gradient-green">
       <div class="d-flex justify-content-between">
         <h5 class="modal-title">Share Social Media</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button class="btn" type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fas fa-xmark text-gold"></i>
+        </button>
       </div>
-      <div class="mt-5">
-        <div class="mb-3">
-          <input type="text" value="http://m9skm.com/game373/index.html" class="form-control border border-0 bg-light">
+      <div class="mt-4">
+        <div class="mb-4">
+          <input type="text" value="http://m9skm.com/game373/index.html" class="form-control border-gradient-gold d-block" readonly>
+
         </div>
         <!-- facebook link share -->
-        <div class="card mb-2 border border-opacity-10">
+        <div class="card border-gradient-gold bg-darkblue mb-3">
           <a href="https://www.facebook.com/sharer/sharer.php?u=http://m9skm.com/game373/index.html" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
             <div class="d-flex justify-content-between">
               <div class="d-flex">
-                <i class="fa-brands fa-facebook-square text-primary d-block fa-2x me-3"></i>
-                <span class="d-block mt-1"> Share on Facebook</span>
+                <i class="fa-brands fa-facebook-square text-gold d-block me-3" style="font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share on Facebook</small>
               </div>
-              <div>
-                <i class="fas fa-angle-right d-block mt-1" style="font-size: 18px;"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right text-gold d-block mt-1" style="font-size: 18px;"></i>
               </div>
             </div>
           </a>
         </div>
         <!-- facebook link share -->
         <!-- telegram link share -->
-        <div class="card mb-2 border border-opacity-10">
+        <div class="card border-gradient-gold bg-darkblue mb-3">
           <a href="https://telegram.me/share/url?url=http://m9skm.com/game373/index.html" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
             <div class="d-flex justify-content-between">
               <div class="d-flex">
-                <i class="fa-brands fa-telegram text-info d-block fa-2x me-3"></i>
-                <span class="d-block mt-1"> Share via Telegram</span>
+                <i class="fa-brands fa-telegram text-gold d-block me-3" style="font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share via Telegram</small>
               </div>
-              <div>
-                <i class="fas fa-angle-right d-block mt-1" style="font-size: 18px;"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right d-block text-gold" style="font-size: 18px;"></i>
               </div>
             </div>
           </a>
         </div>
         <!-- telegram link share -->
         <!-- viber link share -->
-        <div class="card mb-2 border border-opacity-10">
+        <div class="card border-gradient-gold bg-darkblue mb-3">
           <a href="viber://forward?text=နာမည်ပျက်လုံးဝ လုံးဝမရှိ အလျော်/အစား အမှန်ကန်တဲ့ ရိုးရာရှမ်း အမ်နိုင်းရှမ်းကိုးမီး
           မြန်မာနိုင်ငံရဲ့ အကောင်းဆုံး ရှမ်းကိုးမီး😘%20http://m9skm.com/game373/index.html" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
             <div class="d-flex justify-content-between">
               <div class="d-flex">
-                <i class="fa-brands fa-viber d-block me-3 bg-transparent text-primary" style="width:auto; height:auto; font-size: 30px;"></i>
-                <span class="d-block mt-2"> Share via Viber</span>
+                <i class="fa-brands fa-viber d-block me-3 bg-transparent text-gold" style="width:auto; height:auto; font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share via Viber</small>
               </div>
-              <div>
-                <i class="fas fa-angle-right d-block mt-2" style="font-size: 18px;"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right d-block text-gold" style="font-size: 18px;"></i>
               </div>
             </div>
           </a>
         </div>
         <!-- viber link share -->
+        <div class="text-center">
+          <a href="http://m9skm.com/game373/index.html" class="btn btn-gold" target="_blank">တိုက်ရိုက် ကစားရန်</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <!-- done link -->
 
-<!-- taungPawThar ShanKoeMee Game share links modal -->
+<!-- club388 share links modal -->
 <div class="modal fade" tabindex="-1" id="game2">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3">
+    <div class="modal-content p-3 bg-darkblue border-gradient-green">
       <div class="d-flex justify-content-between">
         <h5 class="modal-title">Share Social Media</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button class="btn" type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fas fa-xmark text-gold"></i>
+        </button>
       </div>
-      <div class="mt-5">
-        <div class="mb-3">
-          <input type="text" value="http://m9skm.com/w/signin/index.html?agentId=10000007" class="form-control border border-0 bg-light">
+      <div class="mt-4">
+        <div class="mb-4">
+          <input type="text" value="http://m9skm.com/game373/index.html" class="form-control border-gradient-gold d-block" readonly>
+
         </div>
         <!-- facebook link share -->
-        <div class="card mb-2 border border-opacity-10">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http://m9skm.com/w/signin/index.html?agentId=10000007" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
+        <div class="card border-gradient-gold bg-darkblue mb-3">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://m9skm.com/game373/index.html" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
             <div class="d-flex justify-content-between">
               <div class="d-flex">
-                <i class="fa-brands fa-facebook-square text-primary d-block fa-2x me-3"></i>
-                <span class="d-block mt-1"> Share on Facebook</span>
+                <i class="fa-brands fa-facebook-square text-gold d-block me-3" style="font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share on Facebook</small>
               </div>
-              <div>
-                <i class="fas fa-angle-right d-block mt-1" style="font-size: 18px;"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right text-gold d-block mt-1" style="font-size: 18px;"></i>
               </div>
             </div>
           </a>
         </div>
         <!-- facebook link share -->
         <!-- telegram link share -->
-        <div class="card mb-2 border border-opacity-10">
-          <a href="https://telegram.me/share/url?url=http://m9skm.com/w/signin/index.html?agentId=10000007" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
+        <div class="card border-gradient-gold bg-darkblue mb-3">
+          <a href="https://telegram.me/share/url?url=http://m9skm.com/game373/index.html" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
             <div class="d-flex justify-content-between">
               <div class="d-flex">
-                <i class="fa-brands fa-telegram text-info d-block fa-2x me-3"></i>
-                <span class="d-block mt-1"> Share via Telegram</span>
+                <i class="fa-brands fa-telegram text-gold d-block me-3" style="font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share via Telegram</small>
               </div>
-              <div>
-                <i class="fas fa-angle-right d-block mt-1" style="font-size: 18px;"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right d-block text-gold" style="font-size: 18px;"></i>
               </div>
             </div>
           </a>
         </div>
         <!-- telegram link share -->
         <!-- viber link share -->
-        <div class="card mb-2 border border-opacity-10">
+        <div class="card border-gradient-gold bg-darkblue mb-3">
           <a href="viber://forward?text=နာမည်ပျက်လုံးဝ လုံးဝမရှိ အလျော်/အစား အမှန်ကန်တဲ့ ရိုးရာရှမ်း အမ်နိုင်းရှမ်းကိုးမီး
-          မြန်မာနိုင်ငံရဲ့ အကောင်းဆုံး ရှမ်းကိုးမီး😘%20http://m9skm.com/w/signin/index.html?agentId=10000007" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
+          မြန်မာနိုင်ငံရဲ့ အကောင်းဆုံး ရှမ်းကိုးမီး😘%20http://m9skm.com/game373/index.html" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
             <div class="d-flex justify-content-between">
               <div class="d-flex">
-                <i class="fa-brands fa-viber d-block me-3 bg-transparent text-primary" style="width:auto; height:auto; font-size: 30px;"></i>
-                <span class="d-block mt-2"> Share via Viber</span>
+                <i class="fa-brands fa-viber d-block me-3 bg-transparent text-gold" style="width:auto; height:auto; font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share via Viber</small>
               </div>
-              <div>
-                <i class="fas fa-angle-right d-block mt-2" style="font-size: 18px;"></i>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right d-block text-gold" style="font-size: 18px;"></i>
               </div>
             </div>
           </a>
         </div>
         <!-- viber link share -->
+        <div class="text-center">
+          <a href="http://m9skm.com/game373/index.html" class="btn btn-gold" target="_blank">တိုက်ရိုက် ကစားရန်</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- done link -->
+
+<!-- m9skm share links modal -->
+<div class="modal fade" tabindex="-1" id="game3">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 bg-darkblue border-gradient-green">
+      <div class="d-flex justify-content-between">
+        <h5 class="modal-title">Share Social Media</h5>
+        <button class="btn" type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fas fa-xmark text-gold"></i>
+        </button>
+      </div>
+      <div class="mt-4">
+        <div class="mb-4">
+          <input type="text" value="http://m9skm.com/game373/index.html" class="form-control border-gradient-gold d-block" readonly>
+
+        </div>
+        <!-- facebook link share -->
+        <div class="card border-gradient-gold bg-darkblue mb-3">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://m9skm.com/game373/index.html" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <i class="fa-brands fa-facebook-square text-gold d-block me-3" style="font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share on Facebook</small>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right text-gold d-block mt-1" style="font-size: 18px;"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- facebook link share -->
+        <!-- telegram link share -->
+        <div class="card border-gradient-gold bg-darkblue mb-3">
+          <a href="https://telegram.me/share/url?url=http://m9skm.com/game373/index.html" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <i class="fa-brands fa-telegram text-gold d-block me-3" style="font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share via Telegram</small>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right d-block text-gold" style="font-size: 18px;"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- telegram link share -->
+        <!-- viber link share -->
+        <div class="card border-gradient-gold bg-darkblue mb-3">
+          <a href="viber://forward?text=နာမည်ပျက်လုံးဝ လုံးဝမရှိ အလျော်/အစား အမှန်ကန်တဲ့ ရိုးရာရှမ်း အမ်နိုင်းရှမ်းကိုးမီး
+          မြန်မာနိုင်ငံရဲ့ အကောင်းဆုံး ရှမ်းကိုးမီး😘%20http://m9skm.com/game373/index.html" target="_blank" class="text-decoration-none text-dark p-3 hover-tag">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <i class="fa-brands fa-viber d-block me-3 bg-transparent text-gold" style="width:auto; height:auto; font-size: 30px;"></i>
+                <small class="d-block text-gold"> Share via Viber</small>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-angle-right d-block text-gold" style="font-size: 18px;"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- viber link share -->
+        <div class="text-center">
+          <a href="http://m9skm.com/game373/index.html" class="btn btn-gold" target="_blank">တိုက်ရိုက် ကစားရန်</a>
+        </div>
       </div>
     </div>
   </div>
